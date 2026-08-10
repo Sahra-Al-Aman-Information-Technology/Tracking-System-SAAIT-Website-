@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAAIT Enterprise | Unified B2B Operations Platform</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="SAAIT Tracking System unifies ITSM, HR Operations, Shift Scheduling, Attendance Tracking, and Project Budget Governance into one platform with 3 portals.">
+  <meta name="keywords" content="ITSM, HR Operations, Shift Scheduling, Attendance Tracking, Budget Governance, Tool Consolidation">
+  <meta name="author" content="SAAIT Systems Enterprise">
+  <meta name="robots" content="index, follow">
+
+  <!-- OpenGraph / Social Media -->
+  <meta property="og:title" content="SAAIT Enterprise Platform | Zero Tool Silos">
+  <meta property="og:description" content="Consolidate Jira, BambooHR, Clockify, and Zendesk into a single enterprise platform. Save up to 45%.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B1E3D'/><path d='M30 65 L45 35 L60 65 L75 35' stroke='%2310B981' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+
+  <!-- Google Fonts Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Command Navbar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="navbar-container">
+        <a href="#" class="brand-logo" aria-label="SAAIT Enterprise Home">
+          <div class="brand-icon">S</div>
+          <div style="display: flex; flex-direction: column;">
+            <span class="brand-name">SAAIT</span>
+            <span class="brand-tag">Enterprise Platform</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hub" class="nav-link">Transformation Hub</a></li>
+          <li><a href="#console" class="nav-link">3 Portals Console</a></li>
+          <li><a href="#comparison" class="nav-link">Analyst Matrix</a></li>
+          <li><a href="#roi" class="nav-link">ROI Dashboard</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li class="mobile-only-nav-item" style="width: 100%; margin-top: 0.5rem;">
+            <a href="https://app.saait.io" target="_blank" class="btn btn-outline-light btn-sm" style="width: 100%; justify-content: center;">Platform Login</a>
+          </li>
+          <li class="mobile-only-nav-item" style="width: 100%;">
+            <button class="btn btn-emerald btn-sm open-demo-modal" style="width: 100%; justify-content: center;">Request Demo</button>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="https://app.saait.io" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-sm desktop-only-nav-btn">
+            Platform Login
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+          <button class="btn btn-emerald btn-sm open-demo-modal desktop-only-nav-btn">Request Demo</button>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">&#9776;</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero Section (Split Studio Layout) -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content" data-reveal="fade-up">
+          <div class="badge badge-emerald-dark">
+            <span class="live-pulse-dot"></span>
+            Enterprise B2B Consolidation Engine
+          </div>
+
+          <h1 class="hero-headline">
+            One Platform. Every Operation. <span class="text-emerald">Zero Tool Silos.</span>
+          </h1>
+
+          <p class="hero-subheadline">
+            Consolidate IT Service Management, HR Operations, Shift Scheduling, Attendance Tracking, and Project Budget Governance into one centralized platform powered by 3 role-specific portals (User, HR, Admin). Built for decision-makers evaluating tool consolidation and ROI.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-emerald btn-lg open-demo-modal">
+              Request a Demo
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="#hub" class="btn btn-outline-light btn-lg">
+              Explore Bento Grid
+            </a>
+          </div>
+
+          <div class="hero-proof-bar">
+            <div class="proof-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>45% Lower SaaS Overhead</span>
+            </div>
+            <div class="proof-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>3 Portals, 1 Database</span>
+            </div>
+            <div class="proof-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>100% Budget Hour Governance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scattered Tools -> Unified Platform Diagram -->
+        <div class="hero-visual" data-reveal="scale" data-delay="150">
+          <div class="consolidation-visual-card">
+            <div class="visual-title">
+              <span><span class="live-pulse-dot"></span> Consolidation Engine Stream</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--emerald-roi);">STATUS: ACTIVE</span>
+            </div>
+            <div class="diagram-wrapper">
+              <!-- Scattered Input Tools -->
+              <div class="scattered-tools-row">
+                <div class="tool-chip">
+                  <span>Jira (ITSM)</span>
+                  <span class="tool-chip-badge">$20/usr</span>
+                </div>
+                <div class="tool-chip">
+                  <span>BambooHR</span>
+                  <span class="tool-chip-badge">$12/usr</span>
+                </div>
+                <div class="tool-chip">
+                  <span>Clockify</span>
+                  <span class="tool-chip-badge">$10/usr</span>
+                </div>
+                <div class="tool-chip">
+                  <span>Excel Logs</span>
+                  <span class="tool-chip-badge">Siloed</span>
+                </div>
+              </div>
+
+              <!-- Animated Vector Convergence Flow -->
+              <div class="convergence-flow">
+                <svg class="flow-lines-svg" viewBox="0 0 400 50">
+                  <path d="M 50,0 Q 200,40 200,50" stroke="#EF4444" stroke-width="2.5" fill="none"/>
+                  <path d="M 150,0 Q 200,30 200,50" stroke="#EF4444" stroke-width="2.5" fill="none"/>
+                  <path d="M 250,0 Q 200,30 200,50" stroke="#F59E0B" stroke-width="2.5" fill="none"/>
+                  <path d="M 350,0 Q 200,40 200,50" stroke="#EF4444" stroke-width="2.5" fill="none"/>
+                  <polygon points="195,45 200,50 205,45" fill="#10B981"/>
+                </svg>
+              </div>
+
+              <!-- Unified Core Destination -->
+              <div class="unified-core-box">
+                <span class="unified-badge">&#10003; Unified SAAIT Engine</span>
+                <div class="unified-title">SAAIT Tracking Platform</div>
+                <div class="unified-sub">FastAPI REST Core + 3 Portals + SQL Governance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERATIONAL TRANSFORMATION BENTO GRID HUB -->
+  <section class="section-padding bento-section" id="hub">
+    <div class="container">
+      <div class="section-header" data-reveal="fade-up">
+        <div class="badge badge-amber">Architectural Overhaul</div>
+        <h2 class="section-title">The Operational Transformation Hub</h2>
+        <p class="section-subtitle">
+          How SAAIT's consolidated bento architecture eliminates fragmented tool risks and enforces operational governance.
+        </p>
+      </div>
+
+      <div class="bento-grid-container">
+        <!-- Hero Bento Card (Operational Comparison) -->
+        <div class="bento-card-hero" data-reveal="scale">
+          <div class="bento-split-content">
+            <!-- Legacy Problem Card -->
+            <div class="bento-hero-box bento-hero-left">
+              <div class="badge badge-amber" style="margin-bottom: 0.75rem;">Legacy Operational Workflows</div>
+              <h3 class="bento-hero-title">Fragmented Software & Data Silos</h3>
+              <p class="bento-hero-desc">
+                Traditional setups require companies to buy separate software tools for ticketing, HR rosters, attendance, and project timing. This creates disconnected data silos, un-audited timecards, and unmonitored project budget overruns.
+              </p>
+              <div class="bento-hero-tag-red">
+                &#215; Disconnected Software Tools • 0 Cross-Department Governance
+              </div>
+            </div>
+
+            <!-- SAAIT Solution Card -->
+            <div class="bento-hero-box bento-hero-right">
+              <div class="badge badge-emerald-dark" style="margin-bottom: 0.75rem;">The SAAIT Boardroom Standard</div>
+              <h3 class="bento-hero-title">1 Unified Engine • 3 Role Portals</h3>
+              <p class="bento-hero-desc">
+                SAAIT consolidates your entire operational stack into one platform. Role-tailored User, HR, and Admin portals operate on 1 single transactional SQL database for real-time auditability.
+              </p>
+              <div class="bento-hero-tag-green">
+                &#10003; 1 Consolidated Platform • 100% Audited Attendance & Budget Hour Caps
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 1: Financial Drain -->
+        <div class="bento-card bento-col-4" data-reveal="fade-up" data-delay="100">
+          <div>
+            <div class="bento-card-top">
+              <div class="bento-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <span class="bento-tag">Financial Drain</span>
+            </div>
+            <h4 class="bento-title">Multiple Subscription Overhead</h4>
+            <p class="bento-desc">Buying multiple software applications with compulsory seat minimums inflates operating costs without delivering synergy.</p>
+          </div>
+          <div class="bento-solution-fix">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>SAAIT Fix: 1 Flat Consolidated Platform</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: Operational Silos -->
+        <div class="bento-card bento-col-4" data-reveal="fade-up" data-delay="150">
+          <div>
+            <div class="bento-card-top">
+              <div class="bento-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="8" rx="2"></rect><rect x="2" y="14" width="20" height="8" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <span class="bento-tag">Operational Silos</span>
+            </div>
+            <h4 class="bento-title">Disconnected Team Workflows</h4>
+            <p class="bento-desc">HR shift roster updates never sync with IT ticket escalation or project billing, forcing slow manual handoffs.</p>
+          </div>
+          <div class="bento-solution-fix">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>SAAIT Fix: Auto Team Queue Routing</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Ghost Attendance -->
+        <div class="bento-card bento-col-4" data-reveal="fade-up" data-delay="200">
+          <div>
+            <div class="bento-card-top">
+              <div class="bento-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <span class="bento-tag">Ghost Attendance</span>
+            </div>
+            <h4 class="bento-title">Unverified Remote Clock-Ins</h4>
+            <p class="bento-desc">Field staff and remote workers log hours without IP or location validation, creating un-audited timecard inflation.</p>
+          </div>
+          <div class="bento-solution-fix">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>SAAIT Fix: Geofenced Waiver Audit</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 4: Revenue Leakage -->
+        <div class="bento-card bento-col-6" data-reveal="fade-up" data-delay="100">
+          <div>
+            <div class="bento-card-top">
+              <div class="bento-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <span class="bento-tag">Revenue Leakage</span>
+            </div>
+            <h4 class="bento-title">Unbilled & Over-Cap Project Hours</h4>
+            <p class="bento-desc">Manual post-facto time logs miss billable project hours or blow past client budget limits without automated warning triggers.</p>
+          </div>
+          <div class="bento-solution-fix">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>SAAIT Fix: Hard & Soft Budget Hour Cap Engine</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 5: Dispute Risk -->
+        <div class="bento-card bento-col-6" data-reveal="fade-up" data-delay="150">
+          <div>
+            <div class="bento-card-top">
+              <div class="bento-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </div>
+              <span class="bento-tag">Dispute Risk</span>
+            </div>
+            <h4 class="bento-title">Client Portal Privacy Exposure</h4>
+            <p class="bento-desc">Without RBAC private note security, internal IT or HR commentary risks exposure during client billing reviews.</p>
+          </div>
+          <div class="bento-solution-fix">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>SAAIT Fix: Private Commentary RBAC Isolation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE SAAS COMMAND CONSOLE (3 PORTALS WORKSPACE) -->
+  <section class="section-padding console-section" id="console">
+    <div class="container">
+      <div class="section-header" data-reveal="fade-up">
+        <div class="badge badge-navy">Role-Tailored Command Center</div>
+        <h2 class="section-title">Live SaaS Command Console: 3 Role Portals</h2>
+        <p class="section-subtitle">
+          Experience how SAAIT delivers distinct, focused user interfaces for Users, HR Leads, and Executive Admins.
+        </p>
+      </div>
+
+      <div class="console-workspace" data-reveal="scale">
+        <!-- Sidebar Controls -->
+        <div class="console-sidebar">
+          <span class="console-sidebar-title">// Select Role View</span>
+          
+          <button class="console-tab-btn active" data-console="user">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span class="tab-label-desktop">1. User Portal</span>
+            <span class="tab-label-mobile">User</span>
+          </button>
+
+          <button class="console-tab-btn" data-console="hr">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <span class="tab-label-desktop">2. HR Operations</span>
+            <span class="tab-label-mobile">HR Ops</span>
+          </button>
+
+          <button class="console-tab-btn" data-console="admin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <span class="tab-label-desktop">3. Admin Governance</span>
+            <span class="tab-label-mobile">Admin</span>
+          </button>
+        </div>
+
+        <!-- Main Display Views -->
+        <div class="console-main-display">
+          <!-- View 1: User Portal -->
+          <div class="console-panel-view active" id="console-user">
+            <div>
+              <span class="badge badge-emerald" style="margin-bottom: 0.75rem;">End-User Workspace</span>
+              <h3 class="console-info-header">Frictionless Field & Team Execution</h3>
+              <p class="console-info-desc">
+                End-users log timecards, submit ITSM support tickets, view personal shift schedules, and run billable timers in one place.
+              </p>
+              <ul class="console-checklist">
+                <li class="console-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>ITSM Support Tickets:</strong> Priority tagging & file attachments.</span>
+                </li>
+                <li class="console-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>IP & Geofenced Clock-In:</strong> Verified shift check-in.</span>
+                </li>
+                <li class="console-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Project Task Timer:</strong> Live billable hour tracking.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Simulated Screen -->
+            <div class="app-screen-mock">
+              <div class="app-screen-bar">
+                <div class="app-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                <span class="app-screen-title">saait_user_portal.app</span>
+              </div>
+              <div class="app-widget-stack">
+                <div class="app-widget-row">
+                  <span class="app-widget-label">Shift Status</span>
+                  <span class="app-widget-value">&#10003; Clocked In (IP: 192.168.1.42)</span>
+                </div>
+                <div class="app-widget-row">
+                  <span class="app-widget-label">Project Hours Logged</span>
+                  <span class="app-widget-value" id="liveTimerDisplay">6.5 hrs</span>
+                </div>
+                <div class="app-widget-row">
+                  <span class="app-widget-label">Project Timer Control</span>
+                  <button class="portal-interactive-btn" id="liveTimerBtn" data-running="false">Start Project Timer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 2: HR Operations Portal -->
+          <div class="console-panel-view" id="console-hr">
+            <div>
+              <span class="badge badge-emerald" style="margin-bottom: 0.75rem;">HR & Workforce Console</span>
+              <h3 class="console-info-header">Streamlined Rosters & Attendance Audits</h3>
+              <p class="console-info-desc">
+                HR managers manage shift scheduling, review attendance waiver requests with 1-click approvals, and export verified pre-payroll audit reports.
+              </p>
+              <ul class="console-checklist">
+                <li class="console-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Visual Roster Builder:</strong> Drag-and-drop shift manager.</span>
+                </li>
+                <li class="console-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Attendance Waiver Workflow:</strong> 1-click audit approval.</span>
+                </li>
+                <li class="console-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Pre-Payroll Exporter:</strong> Audit-ready timecards.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Simulated Screen -->
+            <div class="app-screen-mock">
+              <div class="app-screen-bar">
+                <div class="app-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                <span class="app-screen-title">saait_hr_operations.app</span>
+              </div>
+              <div class="app-widget-stack">
+                <div class="app-widget-row">
+                  <span class="app-widget-label">Pending Waiver: Alex R. (IP Mismatch)</span>
+                  <button class="portal-interactive-btn">Approve Waiver</button>
+                </div>
+                <div class="app-widget-row">
+                  <span class="app-widget-label">Weekly Shift Staffing</span>
+                  <span class="app-widget-value">98.4% Covered</span>
+                </div>
+                <div class="app-widget-row">
+                  <span class="app-widget-label">Pre-Payroll Audit Status</span>
+                  <span class="app-widget-value">&#10003; 142 Timecards Verified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View 3: Admin Governance Portal -->
+          <div class="console-panel-view" id="console-admin">
+            <div>
+              <span class="badge badge-emerald" style="margin-bottom: 0.75rem;">Executive Control Console</span>
+              <h3 class="console-info-header">System Governance & Financial Controls</h3>
+              <p class="console-info-desc">
+                CFOs and Operations Directors configure hard/soft project budget hour caps, RBAC security roles, team-based ticket routing, and private client comments.
+              </p>
+              <ul class="console-checklist">
+                <li class="console-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Budget Hour Cap Engine:</strong> Hard/soft warning triggers.</span>
+                </li>
+                <li class="console-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Team Queue Routing:</strong> Rule-based ticket assignment.</span>
+                </li>
+                <li class="console-check-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Private Commentary Security:</strong> Strict RBAC client isolation.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Simulated Screen -->
+            <div class="app-screen-mock">
+              <div class="app-screen-bar">
+                <div class="app-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                <span class="app-screen-title">saait_admin_governance.app</span>
+              </div>
+              <div class="app-widget-stack">
+                <div class="app-widget-row">
+                  <span class="app-widget-label">Active Project Budget Hour Caps</span>
+                  <span class="app-widget-value">12 Active (0 Cap Overruns)</span>
+                </div>
+                <div class="app-widget-row">
+                  <span class="app-widget-label">Client Portal Private Commentary</span>
+                  <span class="app-widget-value">&#10003; RBAC Isolated</span>
+                </div>
+                <div class="app-widget-row">
+                  <span class="app-widget-label">Auto Team Routing Rules</span>
+                  <span class="app-widget-value">8 Rules Enabled</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALYST REPORT COMPARISON MATRIX -->
+  <section class="section-padding comparison-section" id="comparison">
+    <div class="container">
+      <div class="section-header" data-reveal="fade-up">
+        <div class="badge badge-navy">Analyst Report Breakdown</div>
+        <h2 class="section-title">SAAIT vs. Fragmented Standalone Stack</h2>
+        <p class="section-subtitle">
+          Analyst matrix comparing SAAIT's unified platform capabilities against standalone software tools.
+        </p>
+      </div>
+
+      <div class="analyst-matrix-card" data-reveal="scale">
+        <div class="analyst-grid">
+          <div class="analyst-row header-row">
+            <div>Capability / Governance Feature</div>
+            <div>SAAIT Unified Platform</div>
+            <div>Traditional Disconnected Software Stack</div>
+          </div>
+
+          <div class="analyst-row">
+            <div style="font-weight: 600;">IT Service Management (ITSM)</div>
+            <div class="status-badge-check">&#10003; Included Native</div>
+            <div class="status-badge-check">&#10003; Separate Helpdesk App ($20-$25/usr)</div>
+          </div>
+
+          <div class="analyst-row">
+            <div style="font-weight: 600;">Visual Shift Roster Builder</div>
+            <div class="status-badge-check">&#10003; Included Native</div>
+            <div class="status-badge-cross">&#215; Requires Manual Add-on or Excel</div>
+          </div>
+
+          <div class="analyst-row">
+            <div style="font-weight: 600;">Attendance Waiver Workflows</div>
+            <div class="status-badge-check">&#10003; Native Multi-Level Audit</div>
+            <div class="status-badge-cross">&#215; Not Available / Manual Email</div>
+          </div>
+
+          <div class="analyst-row">
+            <div style="font-weight: 600;">Budget Hour Caps & Governance</div>
+            <div class="status-badge-check">&#10003; Hard/Soft Cap Triggers</div>
+            <div class="status-badge-cross">&#215; Not Available in Basic Timers</div>
+          </div>
+
+          <div class="analyst-row">
+            <div style="font-weight: 600;">Assignee & Team Routing Rules</div>
+            <div class="status-badge-check">&#10003; Native Team Queue Routing</div>
+            <div class="status-badge-cross">&#215; Requires Paid Automation Add-on</div>
+          </div>
+
+          <div class="analyst-row">
+            <div style="font-weight: 600;">HR & Pre-Payroll Integration</div>
+            <div class="status-badge-check">&#10003; Direct Roster-to-Payroll</div>
+            <div class="status-badge-cross">&#215; Manual CSV Export / Import</div>
+          </div>
+
+          <div class="analyst-row">
+            <div style="font-weight: 600;">Native Client Portal & Private Notes</div>
+            <div class="status-badge-check">&#10003; Built-in RBAC Privacy</div>
+            <div class="status-badge-cross">&#215; Extra Paid Seat per Client</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI FINANCIAL DASHBOARD -->
+  <section class="section-padding roi-section" id="roi">
+    <div class="container">
+      <div class="section-header" data-reveal="fade-up">
+        <div class="badge badge-emerald-dark">Quantified Value</div>
+        <h2 class="section-title section-title-dark">Measurable ROI & Financial Impact</h2>
+        <p class="section-subtitle section-subtitle-dark">
+          Verifiable business outcomes backed by client deployment data.
+        </p>
+      </div>
+
+      <div class="roi-stats-grid" data-reveal="fade-up">
+        <div class="roi-stat-card">
+          <div class="stat-number-wrapper"><span class="count-up" data-target="45" data-suffix="%">0%</span></div>
+          <h3 class="stat-label">Lower Software Cost</h3>
+          <p class="stat-subtext">Immediate savings by consolidating redundant per-user SaaS licenses.</p>
+        </div>
+
+        <div class="roi-stat-card">
+          <div class="stat-number-wrapper"><span class="count-up" data-target="45" data-prefix="$" data-suffix="K" data-decimals="0">0K</span></div>
+          <h3 class="stat-label">Avg. Saved Annually</h3>
+          <p class="stat-subtext">Net annual cost reduction for a standard 100-user enterprise org.</p>
+        </div>
+
+        <div class="roi-stat-card">
+          <div class="stat-number-wrapper"><span class="count-up" data-target="35" data-suffix="%">0%</span></div>
+          <h3 class="stat-label">Faster Ticket Resolution</h3>
+          <p class="stat-subtext">Accelerated ticket lifecycle through automated team routing rules.</p>
+        </div>
+
+        <div class="roi-stat-card">
+          <div class="stat-number-wrapper"><span class="count-up" data-target="15" data-suffix=" hrs">0 hrs</span></div>
+          <h3 class="stat-label">Saved / Wk on HR Admin</h3>
+          <p class="stat-subtext">Weekly time saved per HR manager through automated waiver tools.</p>
+        </div>
+      </div>
+
+      <!-- Calculator -->
+      <div class="calculator-box" data-reveal="scale">
+        <div class="calc-grid">
+          <div class="calc-controls">
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #FFFFFF;">Interactive SaaS ROI Calculator</h3>
+            <p style="font-size: 0.9rem; color: var(--text-light-secondary);">Adjust team parameters to view projected savings live.</p>
+
+            <div class="calc-slider-group">
+              <div class="slider-header">
+                <span>Number of Employees / Seats</span>
+                <span class="slider-val-badge" id="empCountVal">100</span>
+              </div>
+              <input type="range" id="empCountSlider" min="10" max="500" value="100" step="5">
+            </div>
+
+            <div class="calc-slider-group">
+              <div class="slider-header">
+                <span>Current Monthly Spend / Employee</span>
+                <span class="slider-val-badge" id="costPerEmpVal">$65</span>
+              </div>
+              <input type="range" id="costPerEmpSlider" min="30" max="150" value="65" step="5">
+            </div>
+          </div>
+
+          <div class="calc-output-card">
+            <div class="output-title">Your Projected Net Annual Savings</div>
+            <div class="output-big-num" id="annualSavingsVal">$58,800</div>
+            <p class="output-desc">Plus <strong id="hoursSavedVal" style="color: #FFFFFF;">1,400 hrs/yr</strong> saved in administrative overhead.</p>
+            <button class="btn btn-emerald open-demo-modal" style="width: 100%; justify-content: center; text-align: center; white-space: normal;">
+              Schedule Demo & Lock In ROI
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARDROOM PITCH DECK HIGHLIGHTS -->
+  <section class="section-padding pitch-section" id="highlights">
+    <div class="container">
+      <div class="section-header" data-reveal="fade-up">
+        <div class="badge badge-navy">Boardroom Pitch Deck</div>
+        <h2 class="section-title">The Strategic Executive Narrative</h2>
+        <p class="section-subtitle">
+          How decision-makers justify the migration to SAAIT Unified Platform.
+        </p>
+      </div>
+
+      <div class="pitch-cards-grid" data-reveal="fade-up">
+        <!-- Step 01: Crisis -->
+        <div class="pitch-step-card">
+          <div>
+            <div class="step-card-header">
+              <span class="step-badge badge-danger">PHASE 01 • THE PROBLEM</span>
+              <span class="step-stage-num">01</span>
+            </div>
+            <h3 class="pitch-step-title">The Operational Crisis</h3>
+            <ul class="pitch-step-checklist">
+              <li class="pitch-step-item">
+                <svg class="icon-red" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                <span><strong>Software Overhead:</strong> Running separate apps creates compounding seat subscriptions.</span>
+              </li>
+              <li class="pitch-step-item">
+                <svg class="icon-red" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                <span><strong>Data Silos:</strong> HR rosters don't sync with IT tickets, causing ghost attendance.</span>
+              </li>
+              <li class="pitch-step-item">
+                <svg class="icon-red" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                <span><strong>Revenue Leakage:</strong> Unmonitored time logs blow past client project budget caps.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pitch-card-footer">
+            <span>Status: Ungoverned Risk</span>
+            <span style="color: #DC2626;">High Overhead</span>
+          </div>
+        </div>
+
+        <!-- Step 02: Solution -->
+        <div class="pitch-step-card">
+          <div>
+            <div class="step-card-header">
+              <span class="step-badge">PHASE 02 • THE SOLUTION</span>
+              <span class="step-stage-num">02</span>
+            </div>
+            <h3 class="pitch-step-title">Platform Consolidation</h3>
+            <ul class="pitch-step-checklist">
+              <li class="pitch-step-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>1 Engine, 3 Portals:</strong> User, HR, and Admin portals operate on 1 transactional database.</span>
+              </li>
+              <li class="pitch-step-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Team Queue Routing:</strong> Automated IT ticket assignment speeds resolution by 35%.</span>
+              </li>
+              <li class="pitch-step-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Geofenced Waivers:</strong> Multi-level audit workflow eliminates un-verified clock-ins.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pitch-card-footer">
+            <span>Architecture: Consolidated</span>
+            <span style="color: var(--emerald-roi);">Active Platform</span>
+          </div>
+        </div>
+
+        <!-- Step 03: Return -->
+        <div class="pitch-step-card">
+          <div>
+            <div class="step-card-header">
+              <span class="step-badge">PHASE 03 • THE RETURN</span>
+              <span class="step-stage-num">03</span>
+            </div>
+            <h3 class="pitch-step-title">Verifiable Financial Return</h3>
+            <ul class="pitch-step-checklist">
+              <li class="pitch-step-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>45% Net Savings:</strong> Immediate $30K–$60K annual SaaS overhead reduction.</span>
+              </li>
+              <li class="pitch-step-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>15 Hours/Wk Saved:</strong> Eliminates manual timecard and roster audits for HR leads.</span>
+              </li>
+              <li class="pitch-step-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Budget Governance:</strong> Hard/soft hour caps protect client billing accuracy.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pitch-card-footer">
+            <span>Financial Return: Quantified</span>
+            <span style="color: var(--emerald-roi);">45% ROI Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section-padding faq-section" id="faq">
+    <div class="container">
+      <div class="section-header" data-reveal="fade-up">
+        <div class="badge badge-amber">Executive Objection Handling</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Key technical and security questions addressed for IT Leads, HR Directors, and CFOs.
+        </p>
+      </div>
+
+      <div class="faq-accordion-container" data-reveal="fade-up">
+        <div class="faq-item active">
+          <button class="faq-trigger">
+            <span>Can SAAIT be deployed on-premise or private cloud via Docker?</span>
+            <span class="faq-icon">&#9660;</span>
+          </button>
+          <div class="faq-content" style="max-height: 200px;">
+            Yes. SAAIT is packaged as containerized Docker & Docker Compose services. It can be deployed seamlessly in less than 30 minutes on AWS, Azure, GCP, or on-premise Linux infrastructure without vendor lock-in.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>How does SAAIT prevent ghost attendance for remote or field staff?</span>
+            <span class="faq-icon">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            SAAIT enforces IP address validation and optional geofencing boundaries upon clock-in. Any out-of-bounds clock-in automatically generates an Attendance Waiver Request requiring manager audit and approval.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>Can IT and HR leave internal notes hidden from clients and users?</span>
+            <span class="faq-icon">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            Absolutely. SAAIT features strict comment-level visibility controls built into the RBAC engine. Internal staff notes, HR flags, and financial commentary remain 100% invisible to client portal accounts.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>Does SAAIT support department/team-based ticket assignment?</span>
+            <span class="faq-icon">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            Yes! Tickets can be routed dynamically to functional teams (e.g. 'Level-2 Network Operations' or 'HR Benefits Team') with auto-claim mechanisms and workload balancing rules.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">
+            <span>How is data privacy and role isolation enforced across the 3 portals?</span>
+            <span class="faq-icon">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            Data security is enforced at both the FastAPI REST backend controller layer and PostgreSQL query layer via JWT authentication and granular Role-Based Access Control (RBAC). Users cannot access HR or Admin endpoints.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta-section" data-reveal="scale">
+    <div class="container">
+      <div class="cta-box">
+        <div class="badge badge-emerald-dark">Ready for Consolidation?</div>
+        <h2 class="cta-title">Unify Your Enterprise Operations Today</h2>
+        <p class="cta-sub">
+          Eliminate tool silos, enforce project budget caps, and cut software costs by 45%.
+        </p>
+
+        <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-emerald btn-lg open-demo-modal">
+            Request a Personal Demo
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <a href="https://app.saait.io" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg">
+            Launch Platform Demo
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="brand-logo" aria-label="SAAIT Enterprise Home">
+            <div class="brand-icon">S</div>
+            <div style="display: flex; flex-direction: column;">
+              <span class="brand-name">SAAIT</span>
+              <span class="brand-tag">Enterprise Platform</span>
+            </div>
+          </a>
+          <p class="footer-col-desc">
+            The unified enterprise B2B platform consolidating ITSM, HR Operations, Shift Scheduling, Attendance Audit, and Project Budget Governance into one single source of truth.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Platform Portals</h4>
+          <ul class="footer-links">
+            <li><a href="#console" class="footer-link">User Operations Portal</a></li>
+            <li><a href="#console" class="footer-link">HR Workforce Portal</a></li>
+            <li><a href="#console" class="footer-link">Admin Governance Console</a></li>
+            <li><a href="https://app.saait.io" target="_blank" class="footer-link">Client Portal Login</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Executive Links</h4>
+          <ul class="footer-links">
+            <li><a href="#comparison" class="footer-link">Analyst Comparison Grid</a></li>
+            <li><a href="#roi" class="footer-link">ROI Savings Calculator</a></li>
+            <li><a href="#highlights" class="footer-link">Boardroom Pitch Deck</a></li>
+            <li><a href="#faq" class="footer-link">Security & FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SAAIT Tracking Systems Inc. All rights reserved. Enterprise B2B Operations.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">SOC2 Security Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lead Modal Dialog -->
+  <div class="modal-backdrop" id="leadModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">&#215;</button>
+      
+      <div class="modal-header">
+        <h3 class="modal-title">Request Enterprise Demo</h3>
+        <p class="modal-sub">Schedule a 1-on-1 walkthrough with our Operations Solutions Architect.</p>
+      </div>
+
+      <div id="modalFormStatus"></div>
+
+      <form class="modal-form" id="demoLeadForm">
+        <div class="form-group">
+          <label class="form-label" for="fullName">Full Name</label>
+          <input type="text" id="fullName" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="workEmail">Work Email</label>
+          <input type="email" id="workEmail" class="form-input" placeholder="s.jenkins@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="companySize">Company Size</label>
+          <select id="companySize" class="form-select" required>
+            <option value="">Select workforce size...</option>
+            <option value="10-50">10 – 50 employees</option>
+            <option value="51-200">51 – 200 employees</option>
+            <option value="201-500">201 – 500 employees</option>
+            <option value="500+">500+ Enterprise</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="primaryGoal">Primary Consolidation Target</label>
+          <select id="primaryGoal" class="form-select">
+            <option value="all">Full Tool Consolidation (Jira + BambooHR + Timers)</option>
+            <option value="itsm">ITSM & Team Ticket Routing</option>
+            <option value="hr">HR Roster & Attendance Waivers</option>
+            <option value="budget">Project Budget Hour Caps</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-emerald" style="width: 100%; margin-top: 0.5rem;">
+          Schedule Enterprise Walkthrough
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Custom App JS -->
+  <script src="app.js"></script>
+</body>
+</html>
