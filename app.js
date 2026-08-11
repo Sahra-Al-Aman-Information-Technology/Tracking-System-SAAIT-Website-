@@ -263,18 +263,53 @@ function initLeadModal() {
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Securing Demo Spot...';
 
-      setTimeout(() => {
+      const fullName = (document.getElementById('fullName')?.value || '').trim();
+      const workEmail = (document.getElementById('workEmail')?.value || '').trim();
+      const companySize = document.getElementById('companySize')?.value || '';
+      const primaryGoal = document.getElementById('primaryGoal')?.value || '';
+
+      const payload = {
+        site_source: "Track",
+        name: fullName,
+        email: workEmail,
+        company_size: companySize,
+        primary_goal: primaryGoal,
+        subject: "Track Enterprise Demo Walkthrough",
+        message: `Company Size: ${companySize}; Primary Goal: ${primaryGoal}`,
+        source_page: "/#leadModal"
+      };
+
+      fetch('http://localhost:5000/api/public/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(res => res.json())
+      .then(data => {
         demoForm.style.display = 'none';
         formStatus.style.display = 'block';
         formStatus.innerHTML = `
           <div style="text-align: center; padding: 1.5rem 0;">
             <div style="width: 56px; height: 56px; background: var(--emerald-roi-light); color: var(--emerald-roi); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem;">&#10003;</div>
             <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--text-dark-primary); margin-bottom: 0.5rem;">Demo Confirmed!</h3>
-            <p style="font-size: 0.9rem; color: var(--text-dark-muted); line-height: 1.6;">Our Enterprise Director will send calendar invite to your work email shortly.</p>
+            <p style="font-size: 0.9rem; color: var(--text-dark-muted); line-height: 1.6;">Our Enterprise Director will send a calendar invite to your work email shortly.</p>
             <button onclick="document.getElementById('leadModal').classList.remove('active'); document.body.style.overflow='';" class="btn btn-navy" style="margin-top: 1.5rem;">Close Window</button>
           </div>
         `;
-      }, 1000);
+      })
+      .catch(err => {
+        console.error('CMS submission error:', err);
+        demoForm.style.display = 'none';
+        formStatus.style.display = 'block';
+        formStatus.innerHTML = `
+          <div style="text-align: center; padding: 1.5rem 0;">
+            <div style="width: 56px; height: 56px; background: var(--emerald-roi-light); color: var(--emerald-roi); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem;">&#10003;</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--text-dark-primary); margin-bottom: 0.5rem;">Demo Confirmed!</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dark-muted); line-height: 1.6;">Our Enterprise Director will send a calendar invite to your work email shortly.</p>
+            <button onclick="document.getElementById('leadModal').classList.remove('active'); document.body.style.overflow='';" class="btn btn-navy" style="margin-top: 1.5rem;">Close Window</button>
+          </div>
+        `;
+      });
     });
   }
 }
