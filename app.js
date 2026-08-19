@@ -233,6 +233,14 @@ function initLeadModal() {
 
   if (!modal) return;
 
+  // Dynamic API endpoint: Uses localhost during local development, and live server IP/domain when deployed
+  const isLocal = typeof window !== 'undefined' && 
+    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+  
+  const CMS_ENQUIRY_URL = isLocal
+    ? 'http://localhost:5000/api/public/enquiry'
+    : 'http://58.84.14.54:5000/api/public/enquiry'; // Live SAAIT Backend API
+
   openBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -279,18 +287,24 @@ function initLeadModal() {
         source_page: "/#leadModal"
       };
 
-      fetch('http://localhost:5000/api/public/enquiry', {
+      fetch(CMS_ENQUIRY_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)
       })
-      .then(res => res.json())
+      .then(async (res) => {
+        if (!res.ok) {
+          const errorData = await res.json().catch(() => ({}));
+          throw new Error(errorData.error || `Server responded with status ${res.status}`);
+        }
+        return res.json();
+      })
       .then(data => {
         demoForm.style.display = 'none';
         formStatus.style.display = 'block';
         formStatus.innerHTML = `
           <div style="text-align: center; padding: 1.5rem 0;">
-            <div style="width: 56px; height: 56px; background: var(--emerald-roi-light); color: var(--emerald-roi); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem;">&#10003;</div>
+            <div style="width: 56px; height: 56px; background: var(--emerald-roi-light, #e6f4ea); color: var(--emerald-roi, #137333); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem;">&#10003;</div>
             <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--text-dark-primary); margin-bottom: 0.5rem;">Demo Confirmed!</h3>
             <p style="font-size: 0.9rem; color: var(--text-dark-muted); line-height: 1.6;">Our Enterprise Director will send a calendar invite to your work email shortly.</p>
             <button onclick="document.getElementById('leadModal').classList.remove('active'); document.body.style.overflow='';" class="btn btn-navy" style="margin-top: 1.5rem;">Close Window</button>
@@ -299,20 +313,14 @@ function initLeadModal() {
       })
       .catch(err => {
         console.error('CMS submission error:', err);
-        demoForm.style.display = 'none';
-        formStatus.style.display = 'block';
-        formStatus.innerHTML = `
-          <div style="text-align: center; padding: 1.5rem 0;">
-            <div style="width: 56px; height: 56px; background: var(--emerald-roi-light); color: var(--emerald-roi); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem;">&#10003;</div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--text-dark-primary); margin-bottom: 0.5rem;">Demo Confirmed!</h3>
-            <p style="font-size: 0.9rem; color: var(--text-dark-muted); line-height: 1.6;">Our Enterprise Director will send a calendar invite to your work email shortly.</p>
-            <button onclick="document.getElementById('leadModal').classList.remove('active'); document.body.style.overflow='';" class="btn btn-navy" style="margin-top: 1.5rem;">Close Window</button>
-          </div>
-        `;
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Secure Live Demo Spot';
+        alert('Submission failed. Please try again or check your network connection.');
       });
     });
   }
 }
+
 
 /* --------------------------------------------------------------------------
    7. Smooth Scroll
