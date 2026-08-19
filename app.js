@@ -233,13 +233,15 @@ function initLeadModal() {
 
   if (!modal) return;
 
-  // Dynamic API endpoint: Uses localhost during local development, and live server IP/domain when deployed
+  // Dynamic API endpoint: Uses localhost during local development, and live HTTPS domain when deployed
   const isLocal = typeof window !== 'undefined' && 
     (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
   
-  const CMS_ENQUIRY_URL = isLocal
-    ? 'http://localhost:5000/api/public/enquiry'
-    : 'http://58.84.14.54:5000/api/public/enquiry'; // Live SAAIT Backend API
+  const CMS_ENQUIRY_URL = (typeof window !== 'undefined' && window.CMS_API_URL)
+    ? window.CMS_API_URL
+    : (isLocal
+        ? 'http://localhost:5000/api/public/enquiry'
+        : 'https://saait.co/api/public/enquiry'); // Live SAAIT Backend API (HTTPS)
 
   openBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
